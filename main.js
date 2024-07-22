@@ -11,8 +11,11 @@ let i = 0;
 
 const next = (nextButton) => {
   i++;
-  let insert = reviewArray[i];
-  document.getElementById('jsinsert').innerHTML = insert;
+  if(i > reviewArray.length){
+   document.getElementById('jsinsert').innerHTML = "no other comments"
+  } else { let insert = reviewArray[i];
+  
+  document.getElementById('jsinsert').innerHTML = insert;}
   
 }
 
@@ -42,6 +45,6 @@ const back = (backButton) => {
 
 nextButton.addEventListener('click', next);
 backButton.addEventListener('click', back)
-document.getElementById('jsinsert').innerHTML = insert;
+
 
 
